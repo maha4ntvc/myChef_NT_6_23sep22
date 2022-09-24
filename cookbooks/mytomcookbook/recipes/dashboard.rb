@@ -1,25 +1,26 @@
 template '/opt/tomcat/conf/tomcat-users.xml' do
-    source 'templates/mytomuser.erb'
+    source 'mytomuser.erb'
     mode '0755'
     action :create
 end
 
 
 
+
 template '/opt/tomcat/webapps/manager/META-INF/context.xml' do
-    source 'templates/mytomcontext.erb'
+    source 'mytomcontext.erb'
     mode '0755'
     action :create
 end
 
 template '/opt/tomcat/webapps/host-manager/META-INF/context.xml' do
-    source 'templates/mytomhostcontext.erb'
+    source 'mytomhostcontext.erb'
     mode '0755'
     action :create
 end
 
 template '/etc/systemd/system/tomcat.service' do
-    source 'templates/mytomservice.erb'
+    source 'mytomservice.erb'
     mode '0755'
     action :create
 end
